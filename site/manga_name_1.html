@@ -95,7 +95,7 @@
                     data.chapters.forEach(chapter => {
                         const listItem = document.createElement('li');
                         const link = document.createElement('a');
-                        link.href = `mangareader.com/manga_name_1/${chapter.folder}.html`;
+                        link.href = `/manga_name_1/${chapter.folder}.html`;
                         link.textContent = chapter.title;
                         listItem.appendChild(link);
                         chapterList.appendChild(listItem);
