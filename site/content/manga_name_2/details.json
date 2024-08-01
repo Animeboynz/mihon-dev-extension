@@ -1,0 +1,15 @@
+{
+  "title": "4234234Manga Title",
+  "author": "Author Name",
+  "artist": "Artist Name",
+  "genres": ["Action", "Adventure", "Fantasy"],
+  "description": "This is a brief description of the manga.",
+  "chapters": [
+    {
+      "title": "Chapter_1"
+    },
+    {
+      "title": "Chapter_2"
+    }
+  ]
+}
