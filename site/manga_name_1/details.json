@@ -1,0 +1,17 @@
+{
+  "title": "Manga Titlesdad",
+  "author": "Author Name",
+  "artist": "Artist Name",
+  "genres": ["Action", "Adventure", "Fantasy"],
+  "description": "This is a brief description of the manga.",
+  "chapters": [
+    {
+      "title": "Chapter 1",
+      "folder": "Chapter_1"
+    },
+    {
+      "title": "Chapter 2",
+      "folder": "Chapter_2"
+    }
+  ]
+}
