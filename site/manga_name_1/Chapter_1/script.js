@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const urlParams = new URLSearchParams(window.location.search);
     const mangaName = urlParams.get('manga');
     const chapterName = urlParams.get('chapter');
-    const chapterPath = `/content/${mangaName}/${chapterName}`;
+    const chapterPath = `/`;
 
     document.getElementById('chapter-title').textContent = `${mangaName} - ${chapterName}`;
 
