@@ -1,10 +1,40 @@
 [
   {
-    "folderName": "manga_name_1",
-    "displayName": "Manga Name 1"
+    "title": "Single Page Chapters",
+    "chapterUrl": "single_page_chapters",
+    "coverImage": "single_page_chapters/cover.png",
+    "author": "Animeboynz",
+    "artist": "Animeboynz",
+    "genres": ["Single Page", "Testing", "Dev"],
+    "description": "A list of chapters with only a single page",
+    "chapters": [
+      {
+        "chapterUrl": "single_page_chapters/Chapter_2",
+        "displayName": "Chapter 2"
+      },
+      {
+        "chapterUrl": "single_page_chapters/Chapter_1",
+        "displayName": "Chapter 1"
+      }
+    ]
   },
   {
-    "folderName": "manga_name_2",
-    "displayName": "Manga Name 2"
+    "title": "Extra Long Pages",
+    "chapterUrl": "extra_long_pages",
+    "coverImage": "extra_long_pages/cover.png",
+    "author": "Animeboynz",
+    "artist": "Animeboynz",
+    "genres": ["Long Pages","Long Strip" ,"Testing", "Dev"],
+    "description": "A list of chapters with very long pages",
+    "chapters": [
+      {
+        "chapterUrl": "extra_long_pages/Chapter_2",
+        "displayName": "Chapter 2"
+      },
+      {
+        "chapterUrl": "extra_long_pages/Chapter_1",
+        "displayName": "Chapter 1"
+      }
+    ]
   }
 ]
