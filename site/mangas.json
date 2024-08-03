@@ -10,11 +10,13 @@
     "chapters": [
       {
         "chapterUrl": "single_page_chapters/Chapter_2",
-        "displayName": "Chapter 2"
+        "displayName": "Chapter 2",
+        "pageCount": 1
       },
       {
         "chapterUrl": "single_page_chapters/Chapter_1",
-        "displayName": "Chapter 1"
+        "displayName": "Chapter 1",
+        "pageCount": 1
       }
     ]
   },
@@ -28,12 +30,9 @@
     "description": "A list of chapters with very long pages",
     "chapters": [
       {
-        "chapterUrl": "extra_long_pages/Chapter_2",
-        "displayName": "Chapter 2"
-      },
-      {
         "chapterUrl": "extra_long_pages/Chapter_1",
-        "displayName": "Chapter 1"
+        "displayName": "Chapter 1",
+        "pageCount": 1
       }
     ]
   }
