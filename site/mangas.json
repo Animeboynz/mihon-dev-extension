@@ -11,11 +11,13 @@
       {
         "chapterUrl": "single_page_chapters/Chapter_2",
         "displayName": "Chapter 2",
+        "chapterNumber": 2,
         "pageCount": 1
       },
       {
         "chapterUrl": "single_page_chapters/Chapter_1",
         "displayName": "Chapter 1",
+        "chapterNumber": 1,
         "pageCount": 1
       }
     ]
@@ -32,6 +34,7 @@
       {
         "chapterUrl": "extra_long_pages/Chapter_1",
         "displayName": "Chapter 1",
+        "chapterNumber": 1,
         "pageCount": 1
       }
     ]
