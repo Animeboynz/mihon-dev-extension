@@ -1,0 +1,10 @@
+ext {
+    extName = 'Dev Extension'
+    extClass = '.DevExt'
+    themePkg = 'madara'
+    baseUrl = 'https://mihon-dev.netlify.app/'
+    overrideVersionCode = 1
+    isNsfw = true
+}
+
+apply from: "$rootDir/common.gradle"
