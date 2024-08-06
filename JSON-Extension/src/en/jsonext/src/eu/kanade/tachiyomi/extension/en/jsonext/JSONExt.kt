@@ -27,8 +27,6 @@ class JSONExt : ParsedHttpSource() {
         TODO("Not yet implemented")
     }
 
-    private val data = fetchJson("https://mihon-dev.netlify.app/mangas.json")
-
     data class JsonManga(
         val title: String,
         val chapterUrl: String,
@@ -116,6 +114,7 @@ class JSONExt : ParsedHttpSource() {
     }
 
     private fun fetchJson(url: String): String? {
+        Log.e("JSONExt", "Fetch Called")
         val request = Request.Builder()
             .url(url)
             .build()
@@ -123,13 +122,13 @@ class JSONExt : ParsedHttpSource() {
         return try {
             val response = client.newCall(request).execute()
             if (!response.isSuccessful) {
-                Log.e("Animeboynz", "Failed to fetch JSON: ${response.message}")
+                Log.e("JSONExt", "Failed to fetch JSON: ${response.message}")
                 null
             } else {
                 response.body?.string() // Pretty print JSON with an indentation of 4 spaces
             }
         } catch (e: IOException) {
-            Log.e("Animeboynz", "Failed to fetch JSON: ${e.message}")
+            Log.e("JSONExt", "Failed to fetch JSON: ${e.message}")
             null
         }
     }
@@ -137,14 +136,11 @@ class JSONExt : ParsedHttpSource() {
     override fun fetchPopularManga(page: Int): Observable<MangasPage> {
         val mangaList = mutableListOf<SManga>()
         // ////////
-        if (data == null) {
-            Log.e("JSONExt", "Data is null, cannot fetch popular manga")
-            return Observable.just(MangasPage(emptyList(), false))
-        }
+
         // ////////
 
         try {
-            val jsonArray = JSONArray(data)
+            val jsonArray = JSONArray(fetchJson("https://mihon-dev.netlify.app/mangas.json"))
             for (i in 0 until jsonArray.length()) {
                 val mangaObject = jsonArray.getJSONObject(i)
                 val manga = SManga.create().apply {
@@ -168,15 +164,8 @@ class JSONExt : ParsedHttpSource() {
     override fun fetchChapterList(manga: SManga): Observable<List<SChapter>> {
         val chaptersList = mutableListOf<SChapter>()
 
-        // ////////
-        if (data == null) {
-            Log.e("JSONExt", "Data is null, cannot fetch chapter list")
-            return Observable.just(emptyList())
-        }
-        // /////////
-
         try {
-            val jsonArray = JSONArray(data)
+            val jsonArray = JSONArray(fetchJson("https://mihon-dev.netlify.app/mangas.json"))
             for (i in 0 until jsonArray.length()) {
                 val mangaObject = jsonArray.getJSONObject(i)
                 val mangaUrl = mangaObject.getString("chapterUrl")
@@ -205,15 +194,8 @@ class JSONExt : ParsedHttpSource() {
     override fun fetchPageList(chapter: SChapter): Observable<List<Page>> {
         val pageList = mutableListOf<Page>()
 
-        // //////
-        if (data == null) {
-            Log.e("JSONExt", "Data is null, cannot fetch page list")
-            return Observable.just(emptyList())
-        }
-        // //////
-
         try {
-            val jsonArray = JSONArray(data)
+            val jsonArray = JSONArray(fetchJson("https://mihon-dev.netlify.app/mangas.json"))
             for (i in 0 until jsonArray.length()) {
                 val mangaObject = jsonArray.getJSONObject(i)
                 val chaptersArray = mangaObject.getJSONArray("chapters")
