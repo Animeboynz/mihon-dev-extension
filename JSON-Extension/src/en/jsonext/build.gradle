@@ -1,9 +1,8 @@
 ext {
-    extName = 'Dev Extension'
-    extClass = '.DevExt'
-    themePkg = 'madara'
+    extName = 'JSON Extension'
+    extClass = '.JSONExt'
     baseUrl = 'https://mihon-dev.netlify.app'
-    overrideVersionCode = 1
+    extVersionCode = 1
     isNsfw = true
 }
 
