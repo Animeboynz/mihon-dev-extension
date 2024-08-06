@@ -4,25 +4,20 @@ import android.util.Log
 import eu.kanade.tachiyomi.multisrc.madara.Madara
 import eu.kanade.tachiyomi.source.model.FilterList
 import eu.kanade.tachiyomi.source.model.MangasPage
+import eu.kanade.tachiyomi.source.model.Page
 import eu.kanade.tachiyomi.source.model.SChapter
 import eu.kanade.tachiyomi.source.model.SManga
-import okhttp3.OkHttpClient
 import okhttp3.Request
 import org.json.JSONArray
 import rx.Observable
 import java.io.IOException
-import java.text.SimpleDateFormat
-import java.util.Locale
 
 class DevExt : Madara(
     "Dev Extension",
     "https://mihon-dev.netlify.app",
     "en",
-    dateFormat = SimpleDateFormat("MMM d, yyyy", Locale.US),
 ) {
     override val supportsLatest = false
-
-    override val client = OkHttpClient()
 
     private val data = fetchJson("https://mihon-dev.netlify.app/mangas.json")
 
@@ -80,7 +75,7 @@ class DevExt : Madara(
             for (i in 0 until jsonArray.length()) {
                 val mangaObject = jsonArray.getJSONObject(i)
                 val manga = SManga.create().apply {
-                    url = "$baseUrl/${mangaObject.getString("chapterUrl")}"
+                    url = "/${mangaObject.getString("chapterUrl")}"
                     title = mangaObject.getString("title")
                     thumbnail_url = "$baseUrl/${mangaObject.getString("coverImage")}"
                     description = mangaObject.getString("description")
@@ -106,7 +101,7 @@ class DevExt : Madara(
                 val mangaObject = jsonArray.getJSONObject(i)
                 val mangaUrl = mangaObject.getString("chapterUrl")
 
-                if ("$baseUrl/$mangaUrl" == manga.url) {
+                if ("/$mangaUrl" == manga.url) {
                     val chaptersArray = mangaObject.getJSONArray("chapters")
                     for (j in 0 until chaptersArray.length()) {
                         val chapterObject = chaptersArray.getJSONObject(j)
@@ -125,5 +120,36 @@ class DevExt : Madara(
         }
 
         return Observable.just(chaptersList)
+    }
+
+    override fun fetchPageList(chapter: SChapter): Observable<List<Page>> {
+        val pageList = mutableListOf<Page>()
+
+        try {
+            val jsonArray = JSONArray(data)
+            for (i in 0 until jsonArray.length()) {
+                val mangaObject = jsonArray.getJSONObject(i)
+                val chaptersArray = mangaObject.getJSONArray("chapters")
+
+                for (j in 0 until chaptersArray.length()) {
+                    val chapterObject = chaptersArray.getJSONObject(j)
+                    val chapterUrl = "$baseUrl/${chapterObject.getString("chapterUrl")}"
+
+                    if (chapter.url == chapterUrl) {
+                        val pageCount = chapterObject.getInt("pageCount")
+                        for (k in 0 until pageCount) {
+                            val pageUrl = "$chapterUrl/${k + 1}.png" // Assuming pages are named 1.png, 2.png, etc.
+                            val page = Page(index = k, url = chapterUrl, imageUrl = pageUrl)
+                            pageList.add(page)
+                        }
+                        break // Exit loop once the matching chapter is found
+                    }
+                }
+            }
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+
+        return Observable.just(pageList)
     }
 }
