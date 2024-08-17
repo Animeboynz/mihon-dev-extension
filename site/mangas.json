@@ -9,6 +9,174 @@
     "description": "A list of chapters with only a single page",
     "chapters": [
       {
+        "chapterUrl": "single_page_chapters/Chapter_30",
+        "displayName": "Chapter 30",
+        "chapterNumber": 30,
+        "pageCount": 1
+      },
+      {
+        "chapterUrl": "single_page_chapters/Chapter_29",
+        "displayName": "Chapter 29",
+        "chapterNumber": 29,
+        "pageCount": 1
+      },
+      {
+        "chapterUrl": "single_page_chapters/Chapter_28",
+        "displayName": "Chapter 28",
+        "chapterNumber": 28,
+        "pageCount": 1
+      },
+      {
+        "chapterUrl": "single_page_chapters/Chapter_27",
+        "displayName": "Chapter 27",
+        "chapterNumber": 27,
+        "pageCount": 1
+      },
+      {
+        "chapterUrl": "single_page_chapters/Chapter_26",
+        "displayName": "Chapter 26",
+        "chapterNumber": 26,
+        "pageCount": 1
+      },
+      {
+        "chapterUrl": "single_page_chapters/Chapter_25",
+        "displayName": "Chapter 25",
+        "chapterNumber": 25,
+        "pageCount": 1
+      },
+      {
+        "chapterUrl": "single_page_chapters/Chapter_24",
+        "displayName": "Chapter 24",
+        "chapterNumber": 24,
+        "pageCount": 1
+      },
+      {
+        "chapterUrl": "single_page_chapters/Chapter_23",
+        "displayName": "Chapter 23",
+        "chapterNumber": 23,
+        "pageCount": 1
+      },
+      {
+        "chapterUrl": "single_page_chapters/Chapter_22",
+        "displayName": "Chapter 22",
+        "chapterNumber": 22,
+        "pageCount": 1
+      },
+      {
+        "chapterUrl": "single_page_chapters/Chapter_21",
+        "displayName": "Chapter 21",
+        "chapterNumber": 21,
+        "pageCount": 1
+      },
+      {
+        "chapterUrl": "single_page_chapters/Chapter_20",
+        "displayName": "Chapter 20",
+        "chapterNumber": 20,
+        "pageCount": 1
+      },
+      {
+        "chapterUrl": "single_page_chapters/Chapter_19",
+        "displayName": "Chapter 19",
+        "chapterNumber": 19,
+        "pageCount": 1
+      },
+      {
+        "chapterUrl": "single_page_chapters/Chapter_18",
+        "displayName": "Chapter 18",
+        "chapterNumber": 18,
+        "pageCount": 1
+      },
+      {
+        "chapterUrl": "single_page_chapters/Chapter_17",
+        "displayName": "Chapter 17",
+        "chapterNumber": 17,
+        "pageCount": 1
+      },
+      {
+        "chapterUrl": "single_page_chapters/Chapter_16",
+        "displayName": "Chapter 16",
+        "chapterNumber": 16,
+        "pageCount": 1
+      },
+      {
+        "chapterUrl": "single_page_chapters/Chapter_15",
+        "displayName": "Chapter 15",
+        "chapterNumber": 15,
+        "pageCount": 1
+      },
+      {
+        "chapterUrl": "single_page_chapters/Chapter_14",
+        "displayName": "Chapter 14",
+        "chapterNumber": 14,
+        "pageCount": 1
+      },
+      {
+        "chapterUrl": "single_page_chapters/Chapter_13",
+        "displayName": "Chapter 13",
+        "chapterNumber": 13,
+        "pageCount": 1
+      },
+      {
+        "chapterUrl": "single_page_chapters/Chapter_12",
+        "displayName": "Chapter 12",
+        "chapterNumber": 12,
+        "pageCount": 1
+      },
+      {
+        "chapterUrl": "single_page_chapters/Chapter_11",
+        "displayName": "Chapter 11",
+        "chapterNumber": 11,
+        "pageCount": 1
+      },
+      {
+        "chapterUrl": "single_page_chapters/Chapter_10",
+        "displayName": "Chapter 10",
+        "chapterNumber": 10,
+        "pageCount": 1
+      },
+      {
+        "chapterUrl": "single_page_chapters/Chapter_9",
+        "displayName": "Chapter 9",
+        "chapterNumber": 9,
+        "pageCount": 1
+      },
+      {
+        "chapterUrl": "single_page_chapters/Chapter_8",
+        "displayName": "Chapter 8",
+        "chapterNumber": 8,
+        "pageCount": 1
+      },
+      {
+        "chapterUrl": "single_page_chapters/Chapter_7",
+        "displayName": "Chapter 7",
+        "chapterNumber": 7,
+        "pageCount": 1
+      },
+      {
+        "chapterUrl": "single_page_chapters/Chapter_6",
+        "displayName": "Chapter 6",
+        "chapterNumber": 6,
+        "pageCount": 1
+      },
+      {
+        "chapterUrl": "single_page_chapters/Chapter_5",
+        "displayName": "Chapter 5",
+        "chapterNumber": 5,
+        "pageCount": 1
+      },
+      {
+        "chapterUrl": "single_page_chapters/Chapter_4",
+        "displayName": "Chapter 4",
+        "chapterNumber": 4,
+        "pageCount": 1
+      },
+      {
+        "chapterUrl": "single_page_chapters/Chapter_3",
+        "displayName": "Chapter 3",
+        "chapterNumber": 3,
+        "pageCount": 1
+      },
+      {
         "chapterUrl": "single_page_chapters/Chapter_2",
         "displayName": "Chapter 2",
         "chapterNumber": 2,
@@ -32,10 +200,22 @@
     "description": "A list of chapters with very long pages",
     "chapters": [
       {
+        "chapterUrl": "extra_long_pages/Chapter_3",
+        "displayName": "Chapter 3",
+        "chapterNumber": 3,
+        "pageCount": 10
+      },
+      {
+        "chapterUrl": "extra_long_pages/Chapter_2",
+        "displayName": "Chapter 2",
+        "chapterNumber": 2,
+        "pageCount": 10
+      },
+      {
         "chapterUrl": "extra_long_pages/Chapter_1",
         "displayName": "Chapter 1",
         "chapterNumber": 1,
-        "pageCount": 1
+        "pageCount": 10
       }
     ]
   }
