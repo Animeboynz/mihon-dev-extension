@@ -218,5 +218,22 @@
         "pageCount": 10
       }
     ]
+  },
+  {
+    "title": "High Res Cover",
+    "chapterUrl": "high-res-cover",
+    "coverImage": "high-res-cover/cover.png",
+    "author": "Animeboynz",
+    "artist": "Animeboynz",
+    "genres": ["High Res Cover","Testing", "Dev"],
+    "description": "A book with a very high resolution cover",
+    "chapters": [
+      {
+        "chapterUrl": "high-res-cover/Chapter_1",
+        "displayName": "Chapter 1",
+        "chapterNumber": 1,
+        "pageCount": 1
+      }
+    ]
   }
 ]
